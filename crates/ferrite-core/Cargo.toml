@@ -1,0 +1,12 @@
+[package]
+name = "ferrite-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Core math, coordinate types, and voxel definitions for Ferrite Engine"
+
+[dependencies]
+glam = { workspace = true }
+bytemuck = { workspace = true }
+serde = { workspace = true }
