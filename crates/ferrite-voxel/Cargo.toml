@@ -1,0 +1,24 @@
+[package]
+name = "ferrite-voxel"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Voxel data structures: chunk storage, greedy meshing, SVO, compression"
+
+[dependencies]
+ferrite-core = { workspace = true }
+rayon = { workspace = true }
+lz4_flex = { workspace = true }
+bitcode = { workspace = true }
+noise = { workspace = true }
+serde = { workspace = true }
+bytemuck = { workspace = true }
+glam = { workspace = true }
+
+[dev-dependencies]
+criterion = { workspace = true }
+
+[[bench]]
+name = "voxel_benchmarks"
+harness = false
