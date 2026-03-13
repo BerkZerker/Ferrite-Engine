@@ -8,4 +8,16 @@ description = "Ferrite Engine application binary"
 
 [dependencies]
 ferrite-core = { path = "../crates/ferrite-core" }
+ferrite-render = { path = "../crates/ferrite-render" }
+bevy = { workspace = true }
 tracing = { workspace = true }
+
+[dev-dependencies]
+ash = { workspace = true }
+ash-window = { workspace = true }
+raw-window-handle = { workspace = true }
+winit = "0.30"
+
+[[example]]
+name = "vulkan_test"
+path = "examples/vulkan_test.rs"

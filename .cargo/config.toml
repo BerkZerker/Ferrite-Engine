@@ -1,3 +1,12 @@
+[env]
+# MoltenVK / Vulkan loader discovery on macOS (via Homebrew)
+VK_ICD_FILENAMES = { value = "/opt/homebrew/etc/vulkan/icd.d/MoltenVK_icd.json", force = false }
+VK_DRIVER_FILES = { value = "/opt/homebrew/etc/vulkan/icd.d/MoltenVK_icd.json", force = false }
+VK_LAYER_PATH = { value = "/opt/homebrew/opt/vulkan-validationlayers/share/vulkan/explicit_layer.d", force = false }
+
+[target.'cfg(target_os = "macos")']
+rustflags = ["-C", "link-arg=-Wl,-rpath,/opt/homebrew/lib"]
+
 [profile.dev]
 opt-level = 1
 
